@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS `cryptocurrency` (
+  `crypto_id` INT NOT NULL AUTO_INCREMENT,
+  `crypto_name` VARCHAR(255) NULL DEFAULT NULL,
+  `crypto_label` VARCHAR(255) NULL DEFAULT NULL,
+  `api_id` VARCHAR(255) NULL DEFAULT NULL,
+  `circulating_supply` DOUBLE NULL DEFAULT NULL,
+  `current_price` DOUBLE NULL DEFAULT NULL,
+  `market_capital` DOUBLE NULL DEFAULT NULL,
+  `src` VARCHAR(255) NULL DEFAULT NULL,
+  `unit_change` DOUBLE NULL DEFAULT NULL,
+  `volume` DOUBLE NULL DEFAULT NULL,
+  PRIMARY KEY (`crypto_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;

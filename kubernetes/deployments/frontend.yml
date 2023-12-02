@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata: 
+  name: frontend
+  namespace: bootcamp99
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+      project: bootcamp99
+  template:
+    metadata:
+      labels:
+        app: frontend
+        project: bootcamp99
+    spec:
+      containers:
+        - name: frontend-pod
+          image: ghcr.io/sumanth-zemosolabs/bc99-fe
+          ports:
+          - containerPort: 80
+          readinessProbe:
+            httpGet:
+              port: 80
+              path: /
+            initialDelaySeconds: 3
+            periodSeconds: 3
+          livenessProbe:
+            httpGet:
+              port: 80
+              path: /
+            initialDelaySeconds: 30
+            periodSeconds: 30
+      imagePullSecrets:
+      - name: my-secret

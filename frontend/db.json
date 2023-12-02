@@ -1,0 +1,297 @@
+{
+  "Coins": [
+    {
+      "id": 1,
+      "Name": "Bitcoin",
+      "src": "BItcoin",
+      "Label": "BTC",
+      "Change": "+1.06%",
+      "MarketCap": 60.1,
+      "isWatchlisted": true,
+      "Volume": 2.9,
+      "CirculatingSupply": 18.8,
+      "TransactionFee": 1000,
+      "DeliveryFee": 0.001,
+      "Price": [
+        3406069.54,
+        350000.23,
+        3208908.56,
+        3366069.53,
+        3738906.58,
+        2508931.65,
+        2208903.56,
+        2966069.54,
+        3038906.58,
+        3608905
+      ]
+    },
+    {
+      "id": 2,
+      "Name": "Ethereum",
+      "src": "Etherum",
+      "Label": "ETH",
+      "Change": "-5.49%",
+      "MarketCap": 25.4,
+      "isWatchlisted": true,
+      "Volume": 11.5,
+      "CirculatingSupply": 122.6,
+      "TransactionFee": 30,
+      "DeliveryFee": 0.005,
+      "Price": [
+        1297.93,
+        216678.1,
+        2834.79,
+        7412.18,
+        91329.54,
+        654.22,
+        8645.67,
+        980.75,
+        845.31,
+        16784.01
+      ]
+    },
+    {
+      "id": 3,
+      "Name": "Ethereum 2",
+      "src": "ethereum-2",
+      "Label": "ETH2",
+      "Price": [
+        216678.1
+      ],
+      "Change": "-5.49%",
+      "MarketCap": 25.4,
+      "isWatchlisted": false
+    },
+    {
+      "id": 4,
+      "Name": "Tether",
+      "src": "Tether",
+      "Label": "USDT",
+      "Price": [
+        74.31
+      ],
+      "Change": "+0.11%",
+      "MarketCap": 4.6,
+      "isWatchlisted": true
+    },
+    {
+      "id": 5,
+      "Name": "Bitcoin Coin",
+      "src": "bitcoin-coin",
+      "Label": "BNB",
+      "Price": [
+        24942.54
+      ],
+      "Change": "-3.69%",
+      "MarketCap": 4.2,
+      "isWatchlisted": false
+    },
+    {
+      "id": 6,
+      "Name": "Cardano",
+      "src": "cardana",
+      "Label": "ADA",
+      "Price": [
+        104.52
+      ],
+      "Change": "-1.82%",
+      "MarketCap": 3.4,
+      "isWatchlisted": true
+    },
+    {
+      "id": 7,
+      "Name": "XRP",
+      "src": "xrp",
+      "Label": "XRP",
+      "Price": [
+        57.21
+      ],
+      "Change": "+1.11%",
+      "MarketCap": 2.7,
+      "isWatchlisted": false
+    },
+    {
+      "id": 8,
+      "Name": "Dodge Coin",
+      "src": "dodge-coin",
+      "Label": "DOC",
+      "Price": [
+        17.64
+      ],
+      "Change": "-6.96%",
+      "MarketCap": 2.3,
+      "isWatchlisted": false
+    },
+    {
+      "id": 9,
+      "Name": "USD Coin",
+      "src": "usd-coin",
+      "Label": "USD",
+      "Price": [
+        74.26
+      ],
+      "Change": "+1.01%",
+      "MarketCap": 2.1,
+      "isWatchlisted": false
+    },
+    {
+      "id": 10,
+      "Name": "Binance",
+      "src": "bitcoin-darkblue",
+      "Label": "BIN",
+      "Price": [
+        30054.88
+      ],
+      "Change": "-1.09%",
+      "MarketCap": 1.1,
+      "isWatchlisted": false
+    },
+    {
+      "id": 11,
+      "Name": "Polkadot",
+      "src": "polkadot",
+      "Label": "PKD",
+      "Price": [
+        1642.39
+      ],
+      "Change": "+2.06",
+      "MarketCap": 2.3,
+      "isWatchlisted": false
+    }
+  ],
+  "User": [
+    {
+      "id": "1",
+      "name": "Pardha Saradhi",
+      "accountBalance": 34000,
+      "holdings": [
+        {
+          "coinName": "Bitcoin",
+          "coinLabel": "BTC",
+          "purchaseVolume": 0.95,
+          "Wallet": {
+            "Bitcoin": [
+              {
+                "id": 1,
+                "Name": "Badgley",
+                "Date": {
+                  "Month": "Feb",
+                  "Day": "28"
+                },
+                "purchasePrice": 3012000,
+                "transactionType": "Purchase",
+                "transactionExchangeValue": 0.001,
+                "increasePrice": 900
+              },
+              {
+                "id": 2,
+                "Name": "Jane Cooper",
+                "Date": {
+                  "Month": "Feb",
+                  "Day": "25"
+                },
+                "purchasePrice": 3512,
+                "transactionType": "Purchase",
+                "transactionExchangeValue": 0.023,
+                "increasePrice": 1800
+              },
+              {
+                "id": 3,
+                "Name": "Leslie ALexander",
+                "Date": {
+                  "Month": "Feb",
+                  "Day": "20"
+                },
+                "purchasePrice": 4506,
+                "transactionType": "Purchase",
+                "transactionExchangeValue": 0.003,
+                "increasePrice": 1200
+              },
+              {
+                "id": 4,
+                "Name": "Guy Hawkins",
+                "Date": {
+                  "Month": "Feb",
+                  "Day": "18"
+                },
+                "purchasePrice": 5623,
+                "transactionType": "Purchase",
+                "transactionExchangeValue": 0.015,
+                "increasePrice": 1000
+              },
+              {
+                "id": 5,
+                "Name": "Jenny Wilson",
+                "Date": {
+                  "Month": "Feb",
+                  "Day": "15"
+                },
+                "purchasePrice": 7236,
+                "transactionType": "Purchase",
+                "transactionExchangeValue": 0.065,
+                "increasePrice": 3200
+              },
+              {
+                "id": 6,
+                "Name": "Jacob Jones",
+                "Date": {
+                  "Month": "Feb",
+                  "Day": "13"
+                },
+                "purchasePrice": 5689,
+                "transactionType": "Purchase",
+                "transactionExchangeValue": 0.09,
+                "increasePrice": 9000
+              },
+              {
+                "id": 7,
+                "Name": "Theresa Webb",
+                "Date": {
+                  "Month": "Feb",
+                  "Day": "10"
+                },
+                "purchasePrice": 4325,
+                "transactionType": "Purchase",
+                "transactionExchangeValue": 0.002,
+                "increasePrice": 1800
+              }
+            ]
+          }
+        },
+        {
+          "coinName": "Ethereum",
+          "coinLabel": "ETH",
+          "purchaseVolume": 1.003,
+          "Wallet": {
+            "Ethereum": [
+              {
+                "id": 1,
+                "Name": "Badgley",
+                "Date": {
+                  "Month": "Feb",
+                  "Day": "28"
+                },
+                "transactionExchangeValue": 0.32345,
+                "increasePrice": 408.53,
+                "transactionType": "Purchase",
+                "purchasePrice": 1200
+              },
+              {
+                "id": 2,
+                "Name": "Theresa Webb",
+                "Date": {
+                  "Month": "Feb",
+                  "Day": "10"
+                },
+                "purchasePrice": 1123,
+                "transactionType": "Purchase",
+                "transactionExchangeValue": 0.2,
+                "increasePrice": 240.01
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

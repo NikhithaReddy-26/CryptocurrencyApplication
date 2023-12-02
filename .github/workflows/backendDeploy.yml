@@ -1,0 +1,54 @@
+name: bootcamp99 backend deployment
+
+on:
+  push:
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backendDeploy.yml'
+
+env:
+  GITHUB_USER: ishtiaqsamdani007
+
+jobs:
+  deploy_template:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    strategy:
+      matrix:
+        service: [api-gateway,cryptocurrency-service,portfolio-service,service-registry,user-service,wallet-service,watchlist-service]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'corretto' 
+          java-version: '17'
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ env.GITHUB_USER }}
+          password: ${{ secrets.CR_PAT }}
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-region: us-east-1
+
+      - name: Adding EKS cluster and Build and Deploy the service
+        env: 
+          aws_region: us-east-1
+          cluster_name: bootcamp99
+          SERVICE_NAME: ${{ matrix.service }}
+        run: |
+          aws eks --region $aws_region update-kubeconfig --name $cluster_name
+          cd backend/${SERVICE_NAME}
+          mvn clean package -DskipTests
+          docker build -t ghcr.io/${{ env.GITHUB_USER }}/bc-99-backend-${SERVICE_NAME}:v${{ github.run_number }} .
+          docker push ghcr.io/${{ env.GITHUB_USER }}/bc-99-backend-${SERVICE_NAME}:v${{ github.run_number }}
+          kubectl set image deployment/${SERVICE_NAME} ${SERVICE_NAME}-container=ghcr.io/${{ env.GITHUB_USER }}/bc-99-backend-${SERVICE_NAME}:v${{ github.run_number }} --namespace bootcamp99

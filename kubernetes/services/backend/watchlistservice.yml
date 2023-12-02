@@ -1,0 +1,11 @@
+# service for spring boot microservice adverseaction
+apiVersion: v1
+kind: Service
+metadata:
+  name: watchlist-service
+spec:
+  ports:
+    - port: 8005
+  selector:
+    app: watchlist-service
+    project: bootcamp99

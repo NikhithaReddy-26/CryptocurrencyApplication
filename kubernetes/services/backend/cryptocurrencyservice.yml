@@ -1,0 +1,11 @@
+# service for spring boot microservice adverseaction
+apiVersion: v1
+kind: Service
+metadata:
+  name: cryptocurrency-service
+spec:
+  ports:
+    - port: 8002
+  selector:
+    app: cryptocurrency-service
+    project: bootcamp99
